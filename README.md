@@ -1,7 +1,9 @@
 react-multidrag
 ===============
 
-React component that allows easy multi selected drag and drop.
+[![Build Status](https://travis-ci.org/jconde/react-multidrag.svg?branch=master)](https://travis-ci.org/jconde/react-multidrag)
+
+React component that allows easy multi selected drag and drop. Multiselection is achieved by pressing Ctrl and the behavior emulates the standard OS behavior.
 
 
 Usage
