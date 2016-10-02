@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "50e568cb39ace46f7031"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "ff13cae2fc6689c4b844"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -8295,7 +8295,7 @@
 	function onDrop(keys) {
 		var msg = "Nothing was dropped";
 		if (keys.length) {
-			msg = "Dropping " + keys.join(', ');
+			msg = "Dropped " + keys.join(', ');
 		}
 		document.getElementById('dropped').textContent = msg;
 	}
@@ -8304,32 +8304,47 @@
 		'div',
 		null,
 		_react2.default.createElement(
+			'span',
+			{ className: 'title' },
+			'Dragging Area, use ctrl key for multiselection:'
+		),
+		_react2.default.createElement(
 			_ReactMultiDrag.MultiDrag,
 			{ className: 'drag' },
 			_react2.default.createElement(
-				'span',
-				{ mdKey: 'banana' },
+				'div',
+				{ className: 'md-item', mdKey: 'banana' },
 				'Banana'
 			),
 			_react2.default.createElement(
-				'span',
-				{ mdKey: 'banana' },
+				'div',
+				{ className: 'md-item', mdKey: 'apple' },
 				'Apple'
 			),
 			_react2.default.createElement(
-				'span',
-				{ mdKey: 'banana' },
+				'div',
+				{ className: 'md-item', mdKey: 'orange' },
 				'Orange'
 			),
 			_react2.default.createElement(
-				'span',
-				{ mdKey: 'banana' },
+				'div',
+				{ className: 'md-item', mdKey: 'cherry' },
 				'Cherry'
+			),
+			_react2.default.createElement(
+				'div',
+				{ className: 'md-disabled' },
+				'Disabled'
 			)
 		),
 		_react2.default.createElement(
+			'span',
+			{ className: 'title' },
+			'Dropping Area:'
+		),
+		_react2.default.createElement(
 			_ReactMultiDrag.MultiDrop,
-			{ className: 'drop', mdOnDrop: onDrop },
+			{ className: 'md-container', mdOnDrop: onDrop },
 			_react2.default.createElement('span', { id: 'dropped' })
 		)
 	), document.getElementById('container'));
@@ -29970,7 +29985,6 @@
 			_this.mouseDown = _this.mouseDown.bind(_this);
 			_this.mouseUp = _this.mouseUp.bind(_this);
 			_this.dragStart = _this.dragStart.bind(_this);
-			_this.dragOver = _this.dragOver.bind(_this);
 			_this.keyDownListener = _this.keyDownListener.bind(_this);
 			_this.keyUpListener = _this.keyUpListener.bind(_this);
 
@@ -30036,14 +30050,6 @@
 				e.dataTransfer.setData('selected', JSON.stringify(Array.from(this.state.selected)));
 			}
 		}, {
-			key: 'dragOver',
-			value: function dragOver(e) {
-				e.preventDefault();
-				e.stopPropagation();
-				e.dataTransfer.dropEffect = 'move';
-				return false;
-			}
-		}, {
 			key: 'render',
 			value: function render() {
 				var _this2 = this;
@@ -30051,12 +30057,13 @@
 				return _react2.default.createElement(
 					'div',
 					{
+						className: this.props.className,
 						onDragStart: this.dragStart,
 						onDragOver: this.dragOver
 					},
 					_react2.default.Children.map(this.props.children, function (child) {
 						if (child.props.mdKey) {
-							var className = _this2.state.selected.has(child.props.mdKey) ? 'md-active' : 'md-item';
+							var className = child.props.className + (_this2.state.selected.has(child.props.mdKey) ? ' md-active' : '');
 							return _react2.default.cloneElement(child, {
 								onMouseDown: function onMouseDown() {
 									return _this2.mouseDown(child.props.mdKey);
@@ -30068,7 +30075,7 @@
 								draggable: true,
 								mdKey: undefined
 							});
-						} else return _react2.default.cloneElement(child, { className: "md-disabled" });
+						} else return _react2.default.cloneElement(child);
 					})
 				);
 			}
@@ -30123,7 +30130,7 @@
 		}, {
 			key: 'render',
 			value: function render() {
-				var containerClass = this.state.draggingOver > 0 ? 'md-container md-dragging' : 'md-container';
+				var containerClass = this.state.draggingOver > 0 ? this.props.className + ' md-dragging' : this.props.className;
 				return _react2.default.createElement(
 					'div',
 					{
@@ -30142,7 +30149,7 @@
 		return MultiDrop;
 	}(_react2.default.Component);
 
-	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(259); if (makeExportsHot(module, __webpack_require__(156))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "React-MultiDrag.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(259); if (makeExportsHot(module, __webpack_require__(156))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "React-MultiDrag.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
 
 /***/ },

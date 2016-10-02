@@ -12,7 +12,7 @@ function onDrop(keys) {
 
 ReactDOM.render(
 	<div>
-		<span className="title">Dragging Area:</span>
+		<span className="title">Dragging Area, use ctrl key for multiselection:</span>
 		<MultiDrag className="drag">
 			<div className="md-item" mdKey="banana">Banana</div>
 			<div className="md-item" mdKey="apple">Apple</div>

@@ -1,5 +1,5 @@
 html {
-	background: #f5f5ff;
+	background: #f0ffff;
 	font-family: Calibri Light;
 }
 .md-container {
@@ -10,6 +10,7 @@ html {
 	padding-top: 100px;
 }
 .md-item {
+	background: #fff0f0;
 	margin: 5px;
 	padding: 5px;
 	display: inline-block;
@@ -17,6 +18,7 @@ html {
 	border-radius: 3px;
 }
 .md-disabled {
+	background: #ffffff;
 	margin: 5px;
 	padding: 5px;
 	display: inline-block;
@@ -30,5 +32,5 @@ html {
 }
 /* WILL DETERMINE STYLE WHEN ACTIVE IN DRAGGING LIST */
 .md-active {
-	background: #DDDDFF;
+	background: #44FFDD;
 }
