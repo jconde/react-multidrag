@@ -1,13 +1,15 @@
-react-multidrag
+React-MultiDrag
 ===============
 
 [![Build Status](https://travis-ci.org/jconde/react-multidrag.svg?branch=master)](https://travis-ci.org/jconde/react-multidrag)
 
-React component that allows easy multi selected drag and drop. Multiselection is achieved by pressing Ctrl and the behavior emulates the standard OS behavior.
+React component that allows easy multi selected drag and drop. Multiselection is
+achieved by pressing Ctrl and the behavior emulates the standard WM icon
+selection behavior.
 
 
 Usage
--------------
+-----
 ```javascript
 import { MultiDrag, MultiDrop } from '../../src/React-MultiDrag';
 
@@ -48,3 +50,12 @@ dragging over:
 	background: #DDDDFF;
 }
 ```
+
+
+Running example
+---------------
+In order to run the attached example follow the steps:
+* ```$ npm install```
+* ```$ cd example```
+* ```$ webpack-dev-server```
+* Open http://localhost:8080 in your browser
