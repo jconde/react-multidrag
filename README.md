@@ -4,8 +4,10 @@ React-MultiDrag
 [![Build Status](https://travis-ci.org/jconde/react-multidrag.svg?branch=master)](https://travis-ci.org/jconde/react-multidrag)
 
 React component that allows easy multi selected drag and drop. Multiselection is
-achieved by pressing Ctrl and the behavior emulates the standard WM icon
+achieved by pressing Ctrl key and the behavior emulates the standard WM icon
 selection behavior.
+
+Try quick [demo](https://jconde.github.io/react-multidrag/example/dist/).
 
 
 Usage
