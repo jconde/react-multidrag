@@ -7,7 +7,7 @@ import {
 } from 'react-addons-test-utils';
 import { expect } from 'chai';
 
-import { MultiDrag, MultiDrop } from '../src/React-MultiDrag';
+import { MultiDrag, MultiDrop } from '../dist/React-MultiDrag';
 
 describe('MultiDrag', () => {
 	
