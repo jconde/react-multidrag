@@ -2,7 +2,7 @@
   "name": "react-multidrag",
   "version": "1.0.0",
   "description": "Select one or many elements and drop them into a dragging zone",
-  "main": "index.js",
+  "main": "dist/React-MultiDrag.js",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js \"test/**/*@(.js|.jsx)\"",
     "test:watch": "npm run test -- --watch --watch-extensions jsx",
