@@ -1,6 +1,5 @@
 React-MultiDrag
 ===============
-
 [![Build Status](https://travis-ci.org/jconde/react-multidrag.svg?branch=master)](https://travis-ci.org/jconde/react-multidrag)
 
 React component that allows easy multi selected drag and drop. Multiselection is
@@ -10,10 +9,19 @@ selection behavior.
 Try quick [demo](https://jconde.github.io/react-multidrag/example/dist/).
 
 
+Installation
+------------
+You can install the library using npm:
+```npm install --save react-multidrag```
+
+React-MultiDrag uses react and react-dom as peer dependencies, if you are not using them in your project you will see an NPM unmet dependency error. You just need to add them:
+```npm install --save react react-dom```
+
+
 Usage
 -----
 ```javascript
-import { MultiDrag, MultiDrop } from '../../src/React-MultiDrag';
+import { MultiDrag, MultiDrop } from 'react-multidrag';
 
 ReactDOM.render(
 	<div>
