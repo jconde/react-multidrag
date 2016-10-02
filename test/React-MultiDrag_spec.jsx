@@ -131,7 +131,7 @@ describe('MultiDrag', () => {
 				Simulate.mouseDown(elements[0]);
 				Simulate.mouseUp(elements[0]);
 				
-				expect(elements[0].classList.contains('md-item')).to.equal(true);
+				expect(elements[0].classList.contains('md-active')).to.equal(false);
 				expect(elements[1].classList.contains('md-active')).to.equal(true);
 				expect(component.state.selected.size).to.equal(1);
 				expect(component.state.selected.has('Element 1')).to.equal(false);
@@ -156,7 +156,7 @@ describe('MultiDrag', () => {
 				Simulate.mouseUp(elements[0]);
 				
 				expect(elements[0].classList.contains('md-active')).to.equal(true);
-				expect(elements[1].classList.contains('md-item')).to.equal(true);
+				expect(elements[1].classList.contains('md-active')).to.equal(false);
 				expect(component.state.selected.size).to.equal(1);
 			});
 			
@@ -175,7 +175,7 @@ describe('MultiDrag', () => {
 				Simulate.mouseUp(elements[0]);
 				
 				expect(elements[0].classList.contains('md-active')).to.equal(true);
-				expect(elements[1].classList.contains('md-item')).to.equal(true);
+				expect(elements[1].classList.contains('md-active')).to.equal(false);
 				expect(component.state.selected.size).to.equal(1);
 				expect(component.state.selected.has('Element 1')).to.equal(true);
 			});
