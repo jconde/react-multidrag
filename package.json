@@ -1,6 +1,6 @@
 {
   "name": "react-multidrag",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Select one or many elements and drop them into a dragging zone",
   "main": "dist/React-MultiDrag.js",
   "scripts": {
@@ -8,9 +8,17 @@
     "test:watch": "npm run test -- --watch --watch-extensions jsx",
     "build": "webpack src/React-MultiDrag.jsx dist/React-MultiDrag.js"
   },
-  "keywords": ["mutidrag"],
+  "keywords": [
+    "mutidrag",
+    "dnd",
+    "react",
+    "dragndrop",
+    "drag",
+    "drop"
+  ],
   "author": "Javier Conde",
   "license": "MIT",
+  "homepage": "https://github.com/jconde/react-multidrag",
   "babel": {
     "presets": [
       "es2015",
